@@ -137,22 +137,20 @@ export default function OrderCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-10 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-12"
+          className="mt-10 grid grid-cols-3 gap-4 sm:gap-8"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="flex items-center gap-3">
-              <stat.icon size={24} className="text-sun-yellow" />
-              <div className="text-left">
-                <p className="font-heading text-2xl text-cream">
-                  <AnimatedCounter
-                    target={stat.target}
-                    prefix={stat.prefix}
-                    suffix={stat.suffix}
-                    started={started}
-                  />
-                </p>
-                <p className="text-xs text-cream/60">{stat.label}</p>
-              </div>
+            <div key={stat.label} className="flex flex-col items-center text-center">
+              <stat.icon size={24} className="mb-2 text-sun-yellow" />
+              <p className="font-heading text-2xl text-cream">
+                <AnimatedCounter
+                  target={stat.target}
+                  prefix={stat.prefix}
+                  suffix={stat.suffix}
+                  started={started}
+                />
+              </p>
+              <p className="text-[10px] leading-tight text-cream/60 sm:text-xs">{stat.label}</p>
             </div>
           ))}
         </motion.div>

@@ -107,7 +107,7 @@ export default function FeaturedMenu() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: (i % 4) * 0.1 }}
               className="group overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:shadow-xl hover:scale-[1.03]"
             >
               <div className="relative aspect-[3/2] overflow-hidden">

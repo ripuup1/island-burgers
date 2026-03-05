@@ -4,7 +4,7 @@ import { Phone, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-charcoal text-cream">
+    <footer className="bg-charcoal pb-20 text-cream lg:pb-0">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Logo + tagline */}

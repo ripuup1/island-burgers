@@ -49,7 +49,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="font-heading text-5xl leading-none tracking-wide text-cream sm:text-6xl md:text-7xl lg:text-8xl"
+          className="font-heading text-4xl leading-none tracking-wide text-cream sm:text-6xl md:text-7xl lg:text-8xl"
         >
           THE BURGER
           <br />
