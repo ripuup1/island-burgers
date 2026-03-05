@@ -10,8 +10,8 @@ export default function Hero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1600&h=900&fit=crop"
-        alt="Smash burger close-up"
+        src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/wilmingtonnc/Island-burger-CRM-only_B8F1F435-F430-6BAD-E273CC56D6AAFCFB-b8f1f23e937cfb4_b8f20143-9968-5be3-28d68b153a3a7c89.jpg"
+        alt="Island Burgers & Bites smash burger"
         fill
         className="object-cover"
         priority

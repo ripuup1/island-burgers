@@ -19,8 +19,8 @@ export default function Story() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&h=600&fit=crop"
-              alt="Burgers cooking on a flat-top grill"
+              src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/wilmingtonnc/Island-Burgers-mural-CRM-only_46A3D257-9D63-4E80-9CE929CC8EADCE10-46a3e56c-909d-cf45-c22456912689f7a8.jpg"
+              alt="Island Burgers & Bites restaurant mural"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

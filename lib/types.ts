@@ -25,7 +25,8 @@ export type MenuCategory =
   | "hot-dogs"
   | "chicken"
   | "sides"
-  | "shakes-drinks";
+  | "shakes-drinks"
+  | "beer-wine";
 
 export interface CategoryInfo {
   id: MenuCategory;

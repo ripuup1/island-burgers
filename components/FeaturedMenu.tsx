@@ -13,7 +13,7 @@ const featuredItems = [
       "Our double smash with candied bacon, grilled onions, jalapenos, and special sauce. The one that started it all.",
     price: "$13.99",
     image:
-      "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=600&h=400&fit=crop",
+      "https://assets.simpleviewinc.com/simpleview/image/upload/crm/wilmingtonnc/Island-Burgers-two-burgers-CRM_BF9F460B-AEEB-B892-CAB399633A20F0D6-bf9f429dc99b0e8_bf9f4ba0-c8e5-ad75-0b07f55e9242ead4.png",
   },
   {
     name: "Bacon Double",
