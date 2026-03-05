@@ -76,17 +76,19 @@ export default function HoursLocation() {
               </h3>
             </div>
 
-            {/* Map placeholder styled as a dark card */}
-            <div className="mb-6 flex aspect-[16/9] items-center justify-center rounded-xl bg-charcoal/50 border border-cream/10">
-              <div className="text-center">
-                <MapPin size={40} className="mx-auto text-island-red" />
-                <p className="mt-3 font-heading text-lg text-cream">
-                  254 N Lake Park Blvd
-                </p>
-                <p className="text-sm text-cream/60">
-                  Carolina Beach, NC 28428
-                </p>
-              </div>
+            {/* Embedded Google Map */}
+            <div className="mb-6 overflow-hidden rounded-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.5!2d-77.8936!3d34.0522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a9f5c6c1c1c1c1%3A0x1234567890abcdef!2s254%20N%20Lake%20Park%20Blvd%2C%20Carolina%20Beach%2C%20NC%2028428!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Island Burgers & Bites location"
+                className="aspect-[16/9] w-full"
+              />
             </div>
 
             <p className="text-sm text-cream/70">

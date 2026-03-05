@@ -42,6 +42,42 @@ const featuredItems = [
     image:
       "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&h=400&fit=crop",
   },
+  {
+    name: "Pimento Cheese Burger",
+    tag: "Carolina Classic",
+    description:
+      "Southern pimento cheese melted over a hand-pattied smash patty. Local flavor at its finest.",
+    price: "$9.99",
+    image:
+      "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=600&h=400&fit=crop",
+  },
+  {
+    name: "Chili Cheese Dog",
+    tag: "Loaded",
+    description:
+      "All-beef dog smothered in house chili and melted cheese. Messy in the best way.",
+    price: "$6.49",
+    image:
+      "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=600&h=400&fit=crop",
+  },
+  {
+    name: "Fried Chicken Sandwich",
+    tag: "Crispy",
+    description:
+      "Crispy fried chicken breast with pickles and mayo on a brioche bun. Crunchy, juicy, perfect.",
+    price: "$9.99",
+    image:
+      "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&h=400&fit=crop",
+  },
+  {
+    name: "Loaded Fries",
+    tag: "Shareable",
+    description:
+      "Crinkle fries topped with house chili and melted cheese. A meal by itself.",
+    price: "$6.99",
+    image:
+      "https://images.unsplash.com/photo-1585109649139-366815a0d713?w=600&h=400&fit=crop",
+  },
 ];
 
 export default function FeaturedMenu() {
