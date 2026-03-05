@@ -60,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bebasNeue.variable} ${nunito.variable}`}>
-      <body className="font-body antialiased">{children}</body>
+    <html lang="en" className={`${bebasNeue.variable} ${nunito.variable} overflow-x-hidden`}>
+      <body className="font-body antialiased overflow-x-hidden">{children}</body>
     </html>
   );
 }
