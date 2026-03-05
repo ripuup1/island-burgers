@@ -22,20 +22,20 @@ const photos = [
     alt: "Philly cheesesteak",
   },
   {
-    src: "https://assets.simpleviewinc.com/simpleview/image/upload/w_400,h_400,c_fill,q_auto,f_auto/crm/wilmingtonnc/Island-Burgers-mural-CRM-only_46A3D257-9D63-4E80-9CE929CC8EADCE10-46a3e56c-909d-cf45-c22456912689f7a8.jpg",
-    alt: "Island Burgers restaurant mural",
+    src: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&h=400&fit=crop",
+    alt: "Burgers on the grill",
   },
   {
     src: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&h=400&fit=crop",
     alt: "Handspun milkshake",
   },
   {
-    src: "https://assets.simpleviewinc.com/simpleview/image/upload/w_400,h_400,c_fill,q_auto,f_auto/crm/wilmingtonnc/Island-bnb-CRM-only-seat_0C1DBC4A-5056-BF65-D624483C982A459D-0c1dbead-5056-bf65-d6210951d2449798.jpg",
-    alt: "Island Burgers seating area",
+    src: "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=400&fit=crop",
+    alt: "Bacon cheeseburger",
   },
   {
-    src: "https://assets.simpleviewinc.com/simpleview/image/upload/w_400,h_400,c_fill,q_auto,f_auto/crm/wilmingtonnc/Island-Burgers-CRM-only_46AD06F1-ED42-9148-5729D25FA46A00CD-46ad14c9-fedd-187a-bf85fd8588a82b70.jpg",
-    alt: "Island Burgers restaurant exterior",
+    src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=400&fit=crop",
+    alt: "Food spread on a table",
   },
   {
     src: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=400&fit=crop",

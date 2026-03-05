@@ -19,8 +19,8 @@ export default function Story() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <Image
-              src="https://assets.simpleviewinc.com/simpleview/image/upload/w_800,c_fill,q_auto,f_auto/crm/wilmingtonnc/Island-Burgers-mural-CRM-only_46A3D257-9D63-4E80-9CE929CC8EADCE10-46a3e56c-909d-cf45-c22456912689f7a8.jpg"
-              alt="Island Burgers & Bites restaurant mural"
+              src="https://assets.simpleviewinc.com/simpleview/image/upload/w_800,h_600,c_fill,q_auto,f_auto/crm/wilmingtonnc/Burgers-and-bites-sm-mobile-upload-50d16b045056a34_50d16c7c-5056-a348-3a551711e74913ef.png"
+              alt="Island Burgers & Bites"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
