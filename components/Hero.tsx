@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/wilmingtonnc/Island-burger-CRM-only_B8F1F435-F430-6BAD-E273CC56D6AAFCFB-b8f1f23e937cfb4_b8f20143-9968-5be3-28d68b153a3a7c89.jpg"
+        src="https://assets.simpleviewinc.com/simpleview/image/upload/w_1600,c_fill,q_auto,f_auto/crm/wilmingtonnc/Island-burger-CRM-only_B8F1F435-F430-6BAD-E273CC56D6AAFCFB-b8f1f23e937cfb4_b8f20143-9968-5be3-28d68b153a3a7c89.jpg"
         alt="Island Burgers & Bites smash burger"
         fill
         className="object-cover"
