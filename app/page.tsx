@@ -15,13 +15,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <ReviewTicker />
-      <Story />
-      <FeaturedMenu />
-      <OrderCTA />
-      <Gallery />
-      <HoursLocation />
+      <main>
+        <Hero />
+        <ReviewTicker />
+        <Story />
+        <FeaturedMenu />
+        <OrderCTA />
+        <Gallery />
+        <HoursLocation />
+      </main>
       <Footer />
       <MobileOrderBar />
       <ScrollToTop />

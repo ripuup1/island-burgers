@@ -128,6 +128,7 @@ export default function OrderPage() {
 
           <a
             href="tel:9104586217"
+            aria-label="Call (910) 458-6217"
             className="flex items-center gap-1.5 text-sm text-cream/70 transition-colors hover:text-cream"
           >
             <Phone size={14} />
@@ -224,7 +225,7 @@ export default function OrderPage() {
               dispatch={dispatch}
               onCheckout={handleCheckout}
               isDrawerOpen={isCartDrawerOpen}
-              onCloseDrawer={() => setIsCartDrawerOpen(!isCartDrawerOpen)}
+              onCloseDrawer={() => setIsCartDrawerOpen(false)}
             />
           </div>
         </>

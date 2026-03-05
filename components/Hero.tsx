@@ -40,7 +40,7 @@ export default function Hero() {
           className="mb-6 inline-block rounded-full border border-sun-yellow/50 bg-sun-yellow/10 px-5 py-2 backdrop-blur-sm"
         >
           <span className="text-sm font-semibold tracking-wide text-sun-yellow">
-            🏆 NC&apos;s #1 Cheeseburger — Yelp 2022
+            NC&apos;s #1 Cheeseburger — Yelp &middot; Featured in Our State Magazine
           </span>
         </motion.div>
 

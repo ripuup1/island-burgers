@@ -137,7 +137,7 @@ export default function FeaturedMenu() {
                     href="/order"
                     className="rounded-full bg-island-red px-4 py-1.5 text-sm font-semibold text-cream transition-colors hover:bg-island-red-dark"
                   >
-                    ADD TO ORDER
+                    ORDER NOW
                   </Link>
                 </div>
               </div>

@@ -79,7 +79,7 @@ export default function HoursLocation() {
             {/* Embedded Google Map */}
             <div className="mb-6 overflow-hidden rounded-xl">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.5!2d-77.8936!3d34.0522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a9f5c6c1c1c1c1%3A0x1234567890abcdef!2s254%20N%20Lake%20Park%20Blvd%2C%20Carolina%20Beach%2C%20NC%2028428!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Island+Burgers+%26+Bites,254+N+Lake+Park+Blvd,Carolina+Beach,NC+28428"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
