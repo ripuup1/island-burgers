@@ -9,6 +9,7 @@ import Gallery from "@/components/Gallery";
 import HoursLocation from "@/components/HoursLocation";
 import Footer from "@/components/Footer";
 import MobileOrderBar from "@/components/MobileOrderBar";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <HoursLocation />
       <Footer />
       <MobileOrderBar />
+      <ScrollToTop />
     </>
   );
 }

@@ -25,7 +25,7 @@ export default function MobileOrderBar() {
           animate={{ y: 0 }}
           exit={{ y: 100 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="fixed inset-x-0 bottom-0 z-40 border-t border-charcoal/10 bg-charcoal px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] lg:hidden"
+          className="fixed inset-x-0 bottom-0 z-30 border-t border-charcoal/10 bg-charcoal px-4 py-3 shadow-[0_-4px_20px_rgba(0,0,0,0.3)] lg:hidden"
         >
           <Link
             href="/order"
