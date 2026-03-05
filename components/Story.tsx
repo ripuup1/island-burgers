@@ -1,0 +1,77 @@
+// Island Burgers & Bites — Story
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+
+export default function Story() {
+  return (
+    <section id="story" className="bg-cream py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2">
+          {/* Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-[4/3] overflow-hidden rounded-2xl"
+          >
+            <Image
+              src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&h=600&fit=crop"
+              alt="Burgers cooking on a flat-top grill"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+
+          {/* Copy */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="font-heading text-4xl tracking-wide text-charcoal sm:text-5xl">
+              FROM A GAS STATION.
+              <br />
+              <span className="text-island-red">TO A LEGEND.</span>
+            </h2>
+
+            <p className="mt-6 text-base leading-relaxed text-charcoal/80 sm:text-lg">
+              In 2012, brothers Kanwar and Ajay Singh moved from D.C. to
+              Carolina Beach and bought Island Kwik Mart — a gas station and
+              convenience store. Five years later, they squeezed a 200-square-foot
+              kitchen inside it and started serving smash burgers.
+            </p>
+
+            <p className="mt-4 text-base leading-relaxed text-charcoal/80 sm:text-lg">
+              Word spread fast. Lines wrapped around the building. Yelp named
+              them the #1 Best Cheeseburger in North Carolina. Our State Magazine
+              came calling. And in May 2025, they moved into their own standalone
+              building — still on Lake Park Blvd, still making burgers the same
+              way.
+            </p>
+
+            {/* Pull quote */}
+            <blockquote className="mt-8 border-l-4 border-sun-yellow bg-sun-yellow/10 px-6 py-4 rounded-r-lg">
+              <p className="text-base font-semibold italic text-charcoal sm:text-lg">
+                &ldquo;As soon as we opened, we got a huge reaction from the
+                locals — and we just kept building on that.&rdquo;
+              </p>
+            </blockquote>
+
+            <Link
+              href="/#contact"
+              className="mt-8 inline-block font-heading text-lg tracking-wide text-island-red transition-colors hover:text-island-red-dark"
+            >
+              ABOUT US →
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}

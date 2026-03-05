@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-charcoal: #1A1A18;
+  --color-island-red: #E8272A;
+  --color-island-red-dark: #C41E22;
+  --color-cream: #FFF8EE;
+  --color-sun-yellow: #F5C842;
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-charcoal);
+  --font-heading: var(--font-bebas-neue);
+  --font-body: var(--font-nunito);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+/* Marquee animation for review ticker */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Gallery scroll animation */
+@keyframes gallery-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-gallery {
+  animation: gallery-scroll 40s linear infinite;
+}
+
+/* Steam/shimmer effect for hero */
+@keyframes steam {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateY(-40px) scaleX(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scaleX(0.8);
+  }
+}
+
+.steam-line {
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0.4), rgba(255,255,255,0));
+  border-radius: 50%;
+  filter: blur(3px);
+  animation: steam 3s ease-in-out infinite;
+}
+
+.steam-line:nth-child(2) {
+  animation-delay: 0.5s;
+  animation-duration: 3.5s;
+}
+
+.steam-line:nth-child(3) {
+  animation-delay: 1s;
+  animation-duration: 2.8s;
+}
+
+.steam-line:nth-child(4) {
+  animation-delay: 1.5s;
+  animation-duration: 3.2s;
+}
+
+.steam-line:nth-child(5) {
+  animation-delay: 0.3s;
+  animation-duration: 3.8s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for gallery and ticker */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
