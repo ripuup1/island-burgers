@@ -17,6 +17,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://island-burgers.vercel.app"),
   title: "Island Burgers & Bites | Carolina Beach, NC",
   description:
     "NC's #1 Cheeseburger. Hand-pattied smash burgers, Philly cheesesteaks, and handspun milkshakes in Carolina Beach. Order online for faster pickup.",
@@ -33,6 +34,23 @@ export const metadata: Metadata = {
       "NC's #1 Cheeseburger. Hand-pattied smash burgers made fresh since 2017.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Island Burgers & Bites — Carolina Beach, NC",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Island Burgers & Bites | Carolina Beach, NC",
+    description:
+      "NC's #1 Cheeseburger. Hand-pattied smash burgers made fresh since 2017.",
+  },
+  icons: {
+    icon: "/icon.svg",
   },
 };
 

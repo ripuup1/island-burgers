@@ -1,29 +1,111 @@
 // Island Burgers & Bites — OrderCTA
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Clock, Smartphone, UtensilsCrossed } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
-const stats = [
+interface StatItem {
+  icon: LucideIcon;
+  label: string;
+  prefix: string;
+  target: number;
+  suffix: string;
+}
+
+const stats: StatItem[] = [
   {
     icon: Clock,
     label: "Avg wait without online order",
-    value: "30–45 min",
+    prefix: "",
+    target: 45,
+    suffix: " min",
   },
   {
     icon: Smartphone,
     label: "Online order pickup",
-    value: "~15 min",
+    prefix: "~",
+    target: 15,
+    suffix: " min",
   },
   {
     icon: UtensilsCrossed,
     label: "Items on the menu",
-    value: "25+",
+    prefix: "",
+    target: 25,
+    suffix: "+",
   },
 ];
 
+function AnimatedCounter({
+  target,
+  prefix,
+  suffix,
+  started,
+}: {
+  target: number;
+  prefix: string;
+  suffix: string;
+  started: boolean;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!started) return;
+
+    let frame: number;
+    const duration = 1500; // ms
+    const startTime = performance.now();
+
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out curve for a satisfying deceleration
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * target));
+
+      if (progress < 1) {
+        frame = requestAnimationFrame(animate);
+      }
+    };
+
+    frame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frame);
+  }, [started, target]);
+
+  return (
+    <span>
+      {prefix}
+      {count}
+      {suffix}
+    </span>
+  );
+}
+
 export default function OrderCTA() {
+  const [started, setStarted] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="bg-island-red-dark py-20 lg:py-24">
       <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
@@ -48,8 +130,9 @@ export default function OrderCTA() {
           ready when you arrive.
         </motion.p>
 
-        {/* Stats */}
+        {/* Animated stats */}
         <motion.div
+          ref={sectionRef}
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -60,7 +143,14 @@ export default function OrderCTA() {
             <div key={stat.label} className="flex items-center gap-3">
               <stat.icon size={24} className="text-sun-yellow" />
               <div className="text-left">
-                <p className="font-heading text-2xl text-cream">{stat.value}</p>
+                <p className="font-heading text-2xl text-cream">
+                  <AnimatedCounter
+                    target={stat.target}
+                    prefix={stat.prefix}
+                    suffix={stat.suffix}
+                    started={started}
+                  />
+                </p>
                 <p className="text-xs text-cream/60">{stat.label}</p>
               </div>
             </div>

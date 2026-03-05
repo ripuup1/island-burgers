@@ -8,6 +8,7 @@ import OrderCTA from "@/components/OrderCTA";
 import Gallery from "@/components/Gallery";
 import HoursLocation from "@/components/HoursLocation";
 import Footer from "@/components/Footer";
+import MobileOrderBar from "@/components/MobileOrderBar";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Gallery />
       <HoursLocation />
       <Footer />
+      <MobileOrderBar />
     </>
   );
 }
